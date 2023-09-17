@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <link rel="stylesheet" href="1.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<head>
+  <title>САиММод 1-2</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+  <body>
+    <div id="main">
+      <div id="data">
+        <div id="params">
+
+          <select id="distribution" onchange="selectOnChange(this)">
+            <option value="0">Генератор РРСЧ</option>
+            <option value="1">Равномерное</option>
+            <option value="2">Гаусса</option>
+            <option value="3">Экспоненциальное</option>
+            <option value="4">Гамма</option>
+            <option value="5">Треугольное</option>
+            <option value="6">Симпсона</option>
+          </select>
+
+          <label for="m"> M: </label><input type="text" id="m" value="306133" />
+          <label for="a"> A: </label><input type="text" id="a" value="238547" />
+          <label for="r0"> R0: </label><input type="text" id="r0" value="413579" />
+          <div id="lab2">
+
+          </div>
+          <input id="compute" type="button" value="Compute" />
+
+
+        </div>
+        <div id="res">
+          <div>
+        <p id="canvas">
+          <canvas id="histogram" width="1000" height="600"></canvas>
+        </p>
+          </div>
+        <div id="results">
+          <div>
+          <p>M: <input type="text" readonly="readonly" id="MO" /></p>
+          <p>D: <input type="text" readonly="readonly" id="D" /></p>
+          <p>σ: <input type="text" readonly="readonly" id="MSD" /></p>
+          </div>
+          <div id="uniform">
+            <p>2K/N: <input type="text" readonly="readonly" id="k" /></p>
+            <p>P: <input type="text" readonly="readonly" id="p" /></p>
+            <p>L: <input type="text" readonly="readonly" id="l" /></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
